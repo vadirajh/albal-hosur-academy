@@ -4,50 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Albal-Hosur Academy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Quicksand&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f7fc;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom, #d0eafc, #fefefe);
       margin: 0;
       padding: 0;
+      color: #333;
+      overflow-x: hidden;
     }
     header {
-      background-color: #2e86de;
+      background: linear-gradient(to right, #ffafbd, #ffc3a0);
       color: white;
-      padding: 1.5rem 2rem;
+      padding: 2rem;
       text-align: center;
+      font-family: 'Comic Neue', cursive;
+      animation: popIn 1s ease-out;
+    }
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
     main {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: auto;
-      background: white;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
+      background: #ffffffcc;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
       margin-top: 2rem;
+      animation: slideIn 1s ease-out;
     }
-    h1, h2 {
-      color: #2e86de;
+    @keyframes slideIn {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    h2 {
+      color: #ff6f61;
+      font-family: 'Comic Neue', cursive;
     }
     .intro {
       font-size: 1.2rem;
       margin-bottom: 1.5rem;
+      background: #fdf2e9;
+      padding: 1rem;
+      border-radius: 10px;
     }
     .highlight {
       font-weight: bold;
+      color: #ff6f61;
     }
     section {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease;
+    }
+    li:hover {
+      transform: scale(1.05);
     }
     iframe {
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
+    }
+    .fun-image {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .image-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    .image-row img {
+      width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .image-row img:hover {
+      transform: scale(1.05);
     }
     footer {
       text-align: center;
-      padding: 1rem;
+      padding: 1.5rem;
       font-size: 0.9rem;
-      color: #777;
+      color: #555;
+      background-color: #f9f9f9;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
@@ -57,6 +112,8 @@
     <p>Founded by Aditya Hosur</p>
   </header>
   <main>
+    <img src="https://cdn.pixabay.com/photo/2017/08/07/18/45/kids-2608596_1280.jpg" alt="Kids learning together" class="fun-image">
+
     <section class="intro">
       <p>
         This summer, help your elementary kid take a step ahead in subjects like <span class="highlight">History, Geography, and Science</span> in a fun and engaging way.
@@ -68,15 +125,23 @@
         Aditya is passionate about teaching and enjoys sharing his love of learning with younger kids. Through games, activities, and interactive lessons, your child will build confidence, curiosity, and a deeper understanding of the world around them.
       </p>
     </section>
+
+    <div class="image-row">
+      <img src="https://cdn.pixabay.com/photo/2016/03/27/21/16/school-1280964_1280.jpg" alt="Science experiments">
+      <img src="https://cdn.pixabay.com/photo/2016/01/22/20/32/globe-1159527_1280.jpg" alt="Geography fun">
+      <img src="https://cdn.pixabay.com/photo/2016/03/26/13/57/teacher-1280970_1280.jpg" alt="History storytelling">
+    </div>
+
     <section>
       <h2>What We Offer</h2>
       <ul>
-        <li>Interactive lessons in History, Geography, and Science</li>
-        <li>Fun quizzes and educational games</li>
-        <li>Small group sessions to encourage participation</li>
-        <li>Peer-led learning for better engagement</li>
+        <li>✨ Interactive lessons in History, Geography, and Science</li>
+        <li>🎲 Fun quizzes and educational games</li>
+        <li>👩‍🏫 Small group sessions to encourage participation</li>
+        <li>🤝 Peer-led learning for better engagement</li>
       </ul>
     </section>
+
     <section>
       <h2>Schedule</h2>
       <ul>
@@ -85,15 +150,18 @@
         <li>Each session covers different topics – join both for full coverage!</li>
       </ul>
     </section>
+
     <section>
       <h2>Testimonials</h2>
       <p><em>“My daughter loved learning with Aditya. She looked forward to each class!”</em> – Asha P., Parent</p>
       <p><em>“Aditya makes complex topics simple and fun. Highly recommend!”</em> – Rajiv K., Parent</p>
     </section>
+
     <section>
       <h2>Register Now</h2>
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeV0u2ezwI3YWRrCb-9YS7z7kMazNSzyQj7cLqajfEdft6M7A/viewform?embedded=true" width="100%" height="1200">Loading…</iframe>
     </section>
+
     <section>
       <h2>Contact Us</h2>
       <p>Have questions? We'd love to hear from you!</p>
@@ -105,4 +173,3 @@
   </footer>
 </body>
 </html>
-
